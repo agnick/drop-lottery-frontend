@@ -1,20 +1,17 @@
 import Head from "next/head"
 import styles from "../styles/Home.module.css"
-import ManualHeader from "../components/ManualHeader"
-import MainLotteryInfo from "../components/MainLotteryInfo"
 import MainFooter from "../components/MainFooter"
+import Rules from "../components/Rules"
 
-export default function Home() {
+export default function Main() {
     return (
         <div className={styles.container}>
             <Head>
                 <title>Drop Lottery</title>
-                <meta name="description" content="Drop - decenralized lottery" />
+                <meta name="description" content="Drop lottery!" />
                 <link rel="icon" href="/svgs/ethereumIcon.svg" />
             </Head>
-            <ManualHeader />
-            <MainLotteryInfo />
-            <MainFooter />
+            <Rules />
         </div>
     )
 }
