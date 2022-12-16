@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "dayjs": "^1.11.5",
+    "git": "^0.1.5",
     "js-cookie": "^3.0.1",
     "moralis": "^2.5.1",
     "moralis-v1": "^1.11.0",
