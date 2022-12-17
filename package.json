@@ -2,7 +2,7 @@
   "name": "nextjs-drop-lottery",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "./",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
