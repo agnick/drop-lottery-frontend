@@ -286,6 +286,7 @@ export default function LotteryEntrance() {
                             <Link
                                 href={{
                                     pathname: "/rules",
+                                    query: { dynamic: "rules" },
                                     hash: "hash",
                                 }}
                             >

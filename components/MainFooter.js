@@ -21,6 +21,7 @@ export default function MainFooter() {
                     <Link
                         href={{
                             pathname: "/rules",
+                            query: { dynamic: "rules" },
                             hash: "hash",
                         }}
                     >

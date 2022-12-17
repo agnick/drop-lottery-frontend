@@ -79,6 +79,7 @@ export default function MainLotteryInfo() {
                             onClick={() => {
                                 router.push({
                                     pathname: "/main",
+                                    query: { dynamic: "main" },
                                     hash: "hash",
                                 })
                             }}
