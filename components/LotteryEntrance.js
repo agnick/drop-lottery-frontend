@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 import { useNotification } from "web3uikit"
 import convertEth from "../scripts/converter"
 import { networkConfig } from "../utils/helper-config"
+import Link from "next/link"
 
 export default function LotteryEntrance() {
     const { chainId: chainIdHex, isWeb3Enabled, account } = useMoralis()
@@ -282,7 +283,15 @@ export default function LotteryEntrance() {
                             </div>
                         </div>
                         <div className="text-shadow mt-4 text-right font-whyteInktrap text-5xl font-medium text-misty-rose underline lg:mt-2 lg:text-3xl md:text-left sm:mt-2 sm:hidden sm:text-center sml:mt-1 sml:text-xl">
-                            <a href="/rules">rules</a>
+                            <Link
+                                href={{
+                                    pathname: "/rules",
+                                    query: { dynamic: "param" },
+                                    hash: "hash",
+                                }}
+                            >
+                                rules
+                            </Link>
                         </div>
                     </div>
                 </>

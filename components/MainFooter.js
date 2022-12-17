@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function MainFooter() {
     return (
         <footer className="invisible absolute inset-x-0 bottom-0 mx-[10px] mb-6 flex justify-between sm:visible ">
@@ -16,7 +18,15 @@ export default function MainFooter() {
             <div>
                 <p className="p-2 font-whyteInktrap text-sm text-misty-rose">Powered by Ethereum</p>
                 <div className="text-shadow pr-2 text-right font-whyteInktrap text-sm  text-misty-rose underline">
-                    <a href="/rules">rules</a>
+                    <Link
+                        href={{
+                            pathname: "/rules",
+                            query: { dynamic: "param" },
+                            hash: "hash",
+                        }}
+                    >
+                        rules
+                    </Link>
                 </div>
             </div>
         </footer>
