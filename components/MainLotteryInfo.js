@@ -5,8 +5,10 @@ import { useEffect, useState } from "react"
 import { ethers } from "ethers"
 import convertEth from "../scripts/converter"
 import Timer from "./Timer"
+import { useRouter } from "next/router"
 
 export default function MainLotteryInfo() {
+    const router = useRouter()
     const { chainId: chainIdHex, isWeb3Enabled } = useMoralis()
     const chainId = parseInt(chainIdHex)
     const casinoAddress = chainId in contractAddresses ? contractAddresses[chainId][0] : null
@@ -72,11 +74,17 @@ export default function MainLotteryInfo() {
                         ></img>
                     </li>
                     <li className="lg:mt-15 mt-10 lg:flex lg:flex-col lg:items-center lg:justify-center md:mt-[80px] sm:mt-[130px]">
-                        <a href="/main">
-                            <button className="h-[80px] w-[400px] rounded-[20px] bg-coral-gradient text-center font-whyteInktrap text-5xl font-medium text-misty-rose lg:h-[70px] lg:w-[300px] lg:text-3xl">
-                                play
-                            </button>
-                        </a>
+                        <button
+                            className="h-[80px] w-[400px] rounded-[20px] bg-coral-gradient text-center font-whyteInktrap text-5xl font-medium text-misty-rose lg:h-[70px] lg:w-[300px] lg:text-3xl"
+                            onClick={() => {
+                                router.push({
+                                    pathname: "/main",
+                                    hash: "hash",
+                                })
+                            }}
+                        >
+                            play
+                        </button>
                     </li>
                 </ul>
                 <div>
